@@ -7,6 +7,7 @@ module.exports = {
       {
         singleQuote: false,
         parser: "flow",
+        endOfLine: "auto",
       },
     ],
   },
