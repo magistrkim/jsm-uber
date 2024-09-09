@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import Swiper from "react-native-swiper";
-import { onboarding } from "../constants";
+import { onboarding } from "../../constants";
 
 const Onboarding = () => {
   const swiperRef = useRef<Swiper>(null);

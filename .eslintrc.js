@@ -1,6 +1,7 @@
 module.exports = {
   extends: ["expo", "prettier"],
   plugins: ["prettier"],
+  ignorePatterns: ["*.d.ts"],
   rules: {
     "prettier/prettier": [
       "error",
