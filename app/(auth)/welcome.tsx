@@ -16,7 +16,7 @@ const Onboarding = () => {
       <TouchableOpacity
         className="w-full flex justify-end items-end p-5"
         onPress={() => {
-          router.replace("/(auth)/sign-in");
+          router.replace("/(auth)/sign-up");
         }}
       >
         <Text className="text-md text-black font-JakartaBold">Skip</Text>
@@ -39,12 +39,12 @@ const Onboarding = () => {
               className="h-[300px] w-full"
               resizeMode="contain"
             />
-            <View className="flex flex-row items-center justify-center w-full mt-10">
+            <View className="flex flex-row items-center justify-center w-full mt-5">
               <Text className="text-black text-3xl font-bold text-center mx-10">
                 {item.title}
               </Text>
             </View>
-            <Text className="text-lg font-JakartaSemiBold text-center mx-10 mt-3 text-[#858585]">
+            <Text className="text-lg font-JakartaSemiBold text-center mx-10 mt-3 mb-28 text-[#858585]">
               {item.description}
             </Text>
           </View>
@@ -54,7 +54,7 @@ const Onboarding = () => {
         title={isLastSlide ? "Get Started" : "Next"}
         onPress={() =>
           isLastSlide
-            ? router.replace("/(auth)/sign-in")
+            ? router.replace("/(auth)/sign-up")
             : swiperRef.current?.scrollBy(1)
         }
         className="w-11/12 mt-20 mb-10"
