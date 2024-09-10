@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import React, { useRef, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
@@ -25,14 +25,25 @@ const Onboarding = () => {
           <View className="h-[4px] w-[32px] mx-1 bg-[#E2E8F0] rounded-full" />
         }
         activeDot={
-          <View className="h-[4px] w-[32px] mx-1 bg-[#0286FF] rounded-ful" />
+          <View className="h-[4px] w-[32px] mx-1 bg-[#E53E3E] rounded-ful" />
         }
         onIndexChanged={(index) => setActiveIndex(index)}
       >
         {onboarding.map((item) => (
-          <View key={item.id}>
-            <Text>{item.title}</Text>
-            <Text>{item.description}</Text>
+          <View key={item.id} className="flex items-center justify-center p-5">
+            <Image
+              source={item.image}
+              className="h-[300px] w-full"
+              resizeMode="contain"
+            />
+            <View className="flex flex-row items-center justify-center w-full mt-10">
+              <Text className="text-black text-3xl font-bold text-center mx-10">
+                {item.title}
+              </Text>
+            </View>
+            <Text className="text-lg font-JakartaSemiBold text-center mx-10 mt-3 text-[#858585]">
+              {item.description}
+            </Text>
           </View>
         ))}
       </Swiper>
