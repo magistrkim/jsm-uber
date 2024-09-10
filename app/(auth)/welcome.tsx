@@ -36,7 +36,7 @@ const Onboarding = () => {
           <View key={item.id} className="flex items-center justify-center p-5">
             <Image
               source={item.image}
-              className="h-[300px] w-full"
+              className="h-[340px] w-full"
               resizeMode="contain"
             />
             <View className="flex flex-row items-center justify-center w-full mt-5">
