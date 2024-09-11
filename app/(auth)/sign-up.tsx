@@ -19,7 +19,7 @@ const SignUp = () => {
       <View className="flex-1 bg-white">
         <View className="relative w-full h-[250px]">
           <Image source={images.signUpCar} className="z-0 w-full h-[250px]" />
-          <Text className="text-2xl text-primary-500 font-JakartaBold absolute bottom-5 left-5">
+          <Text className="text-2xl text-success-600 font-JakartaBold absolute bottom-5 left-5">
             Create Your Account
           </Text>
         </View>
@@ -55,8 +55,8 @@ const SignUp = () => {
             <Text>Already have an account? </Text>
             <Text className="text-general-400">Log in</Text>
           </Link>
-          {/* Verification Modal */}
         </View>
+        {/* Verification Modal */}
       </View>
     </ScrollView>
   );

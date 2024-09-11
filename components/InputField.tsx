@@ -34,14 +34,14 @@ const InputField = ({
             {label}
           </Text>
           <View
-            className={`flex flex-row justify-start items-center relative bg-primary-200 
-                rounded-2xl border border-primary-200 focus:border-primary-800 ${containerStyle}`}
+            className={`flex flex-row justify-start items-center relative bg-primary-100 
+                rounded-2xl border border-primary-300 focus:border-primary-800 ${containerStyle}`}
           >
             {icon && (
               <Image source={icon} className={`w-6 h-6 ml-4 ${iconStyle}`} />
             )}
             <TextInput
-              className={`font-JakartaSemiBold rounded-2xl flex-1 p-4 text-[15px] text-left ${inputStyle}`}
+              className={`font-JakartaMedium rounded-2xl flex-1 p-4 text-[15px] text-left ${inputStyle}`}
               secureTextEntry={secureTextEntry}
               {...props}
             />
