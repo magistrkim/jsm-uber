@@ -19,7 +19,7 @@ const Onboarding = () => {
           router.replace("/(auth)/sign-up");
         }}
       >
-        <Text className="text-md text-black font-JakartaBold">Skip</Text>
+        <Text className="text-md text-[#E53E3E]  font-JakartaBold">Skip</Text>
       </TouchableOpacity>
       <Swiper
         ref={swiperRef}
