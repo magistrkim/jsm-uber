@@ -1,6 +1,7 @@
 import { Image, ScrollView, Text, View } from "react-native";
 import React from "react";
 import { images } from "@/constants";
+import InputField from "@/components/InputField";
 
 const SignUp = () => {
   return (
@@ -12,8 +13,8 @@ const SignUp = () => {
             Create Your Account
           </Text>
         </View>
-        <View>
-          <></>
+        <View className="p-5">
+          <InputField />
         </View>
       </View>
     </ScrollView>
