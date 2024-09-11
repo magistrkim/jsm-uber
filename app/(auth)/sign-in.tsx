@@ -4,6 +4,7 @@ import { icons, images } from "@/constants";
 import InputField from "@/components/InputField";
 import Button from "@/components/Button";
 import { Link } from "expo-router";
+import OAuth from "@/components/OAuth";
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -39,7 +40,7 @@ const SignIn = () => {
             secureTextEntry={true}
           />
           <Button title="Sign In" className="mt-6" onPress={onSignInPress} />
-          {/* OAuth */}
+          <OAuth />
           <Link
             href={"/(auth)/sign-up"}
             className="text-lg mt-10 text-center text-general-200"
