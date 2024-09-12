@@ -4,9 +4,11 @@ import React from "react";
 const OAuth = () => {
   return (
     <View>
-      <Text className="text-2xl text-center text-red-600 mt-4 font-JakartaBold">
-        OAuth
-      </Text>
+      <View className="flex flex-row justify-center items-center mt-4 gap-x-3">
+        <View className="flex-1 h-[1px] bg-general-100" />
+        <Text className="text-lg">Or</Text>
+        <View className="flex-1 h-[1px] bg-general-100" />
+      </View>
     </View>
   );
 };
