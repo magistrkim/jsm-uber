@@ -49,7 +49,7 @@ const Button = ({
     >
       {IconLeft && <IconLeft />}
       <Text
-        className={`text-lg uppercase font-bold ${getTextVariantStyle(textVariant)} ${className} `}
+        className={`text-lg font-bold ${getTextVariantStyle(textVariant)} ${className} `}
       >
         {title}
       </Text>
