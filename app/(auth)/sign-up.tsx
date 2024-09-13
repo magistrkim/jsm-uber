@@ -110,13 +110,43 @@ const SignUp = () => {
             <Text className="text-general-400">Log in</Text>
           </Link>
         </View>
+        <ReactNativeModal
+          isVisible={verification.state === "pending"}
+          onModalHide={() =>
+            setVerification({ ...verification, state: "success" })
+          }
+        >
+          <View className="min-h-[300px] bg-white rounded-2xl px-7 py-9">
+            <Text className="text-primary-800 text-2xl font-JakartaBold text-center">
+              Verification
+            </Text>
+            <Text className="text-gray-500 text-base font-Jakarta mt-2 mb-5 text-center">
+              We have sent a verification code to {form.email}
+            </Text>
+            <InputField
+              label="Code"
+              icon={icons.lock}
+              placeholder="12345"
+              value={verification.code}
+              keyboardType="numeric"
+              onChangeText={(code) =>
+                setVerification({ ...verification, code })
+              }
+            />
+            <Button
+              title="Browse Home"
+              onPress={() => router.replace("/(root)/(tabs)/home")}
+              className="mt-5"
+            />
+          </View>
+        </ReactNativeModal>
         <ReactNativeModal isVisible={verification.state === "success"}>
           <View className="min-h-[300px] bg-white rounded-2xl px-7 py-9">
             <Image
               source={images.check}
               className="h-[110px] w-[110px]  mx-auto my-5"
             />
-            <Text className="text-primary-500 text-3xl font-JakartaBold text-center">
+            <Text className="text-primary-800 text-3xl font-JakartaBold text-center">
               Verified!
             </Text>
             <Text className="text-gray-500 text-base font-Jakarta mt-2 text-center">
