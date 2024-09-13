@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { icons, images } from "@/constants";
 import InputField from "@/components/InputField";
 import Button from "@/components/Button";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import OAuth from "@/components/OAuth";
 import { useSignUp } from "@clerk/clerk-expo";
 import ReactNativeModal from "react-native-modal";
@@ -16,7 +16,7 @@ const SignUp = () => {
     password: "",
   });
   const [verification, setVerification] = useState({
-    state: "success",
+    state: "pending",
     error: "",
     code: "",
   });
@@ -115,6 +115,17 @@ const SignUp = () => {
             <Image
               source={images.check}
               className="h-[110px] w-[110px]  mx-auto my-5"
+            />
+            <Text className="text-primary-500 text-3xl font-JakartaBold text-center">
+              Verified!
+            </Text>
+            <Text className="text-gray-500 text-base font-Jakarta mt-2 text-center">
+              You have successfully verified your account
+            </Text>
+            <Button
+              title="Browse Home"
+              onPress={() => router.replace("/(root)/(tabs)/home")}
+              className="mt-5"
             />
           </View>
         </ReactNativeModal>
