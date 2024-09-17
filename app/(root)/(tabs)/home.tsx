@@ -8,7 +8,7 @@ const Home = () => {
   const { user } = useUser();
 
   return (
-    <SafeAreaView className="bg-general-200">
+    <SafeAreaView className="bg-general-500">
       <FlatList
         data={recentRides?.slice(0, 5)}
         renderItem={({ item }) => <RideCard ride={item} />}
