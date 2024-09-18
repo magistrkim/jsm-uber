@@ -2,6 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { Ride } from "@/types/type";
 import { icons } from "@/constants";
+import { formatDate, formatTime } from "@/lib/utils";
 
 const RideCard = ({
   ride: {
@@ -19,7 +20,7 @@ const RideCard = ({
 }) => {
   return (
     <View className="flex flex-row justify-center items-center rounded-lg bg-white shadow-sm shadow-neutral-300 mb-3">
-      <View className="flex flex-row justify-between p-3 items-center">
+      <View className="flex flex-col justify-center p-3 items-center">
         <View className="flex flex-row justify-between items-center">
           <Image
             className="w-[80px] h-[90px] rounded-lg"
@@ -48,7 +49,7 @@ const RideCard = ({
               Date & Time
             </Text>
             <Text className="text-md font-JakartaMedium text-gray-500">
-              {formatDate(created_at)}, {formatDate(ride_time)}
+              {formatDate(created_at)}, {formatTime(ride_time)}
             </Text>
           </View>
         </View>
