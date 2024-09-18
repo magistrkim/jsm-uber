@@ -112,7 +112,7 @@ export const recentRides = [
     destination_longitude: "83.985567",
     ride_time: 391,
     fare_price: "19500.00",
-    payment_status: "paid",
+    payment_status: "Not paid",
     driver_id: 2,
     user_id: "1",
     created_at: "2024-08-12 05:19:20.620007",

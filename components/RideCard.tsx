@@ -16,7 +16,7 @@ const RideCard = ({
     ride_time,
   },
 }: {
-  ride: Ride;
+  ride: Ride,
 }) => {
   return (
     <View className="flex flex-row justify-center items-center rounded-lg bg-white shadow-sm shadow-neutral-300 mb-3">
@@ -43,13 +43,39 @@ const RideCard = ({
             </View>
           </View>
         </View>
-        <View className="flex flex-col bg-general-500 w-full mt-5 rounded-lg p-3 items-start justify-center">
+        <View className="flex flex-col bg-primary-100 w-full mt-5 rounded-lg p-3 items-start justify-center">
           <View className="flex flex-row w-full justify-between items-center mb-5">
-            <Text className="text-md font-JakartaMedium text-gray-500">
+            <Text className="text-md font-JakartaMedium text-gray-600">
               Date & Time
             </Text>
-            <Text className="text-md font-JakartaMedium text-gray-500">
+            <Text className="text-md font-JakartaMedium text-gray-600">
               {formatDate(created_at)}, {formatTime(ride_time)}
+            </Text>
+          </View>
+          <View className="flex flex-row w-full justify-between items-center mb-5">
+            <Text className="text-md font-JakartaMedium text-gray-600">
+              Driver
+            </Text>
+            <Text className="text-md font-JakartaMedium text-gray-600">
+              {driver.first_name} {driver.last_name}
+            </Text>
+          </View>
+          <View className="flex flex-row w-full justify-between items-center mb-5">
+            <Text className="text-md font-JakartaMedium text-gray-600">
+              Car seats
+            </Text>
+            <Text className="text-md font-JakartaMedium text-gray-600">
+              {driver.car_seats}
+            </Text>
+          </View>
+          <View className="flex flex-row w-full justify-between items-center mb-5">
+            <Text className="text-md font-JakartaMedium text-gray-600">
+              Payment Status
+            </Text>
+            <Text
+              className={`text-lg capitalize font-JakartaBold ${payment_status === "paid" ? "text-success-500" : "text-red-600"}`}
+            >
+              {payment_status}
             </Text>
           </View>
         </View>
