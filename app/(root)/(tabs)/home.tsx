@@ -1,12 +1,12 @@
 // import { SignedIn, useUser } from "@clerk/clerk-expo";
-import { FlatList, Image, Text, View } from "react-native";
+import { ActivityIndicator, FlatList, Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images, recentRides } from "@/constants";
 import RideCard from "@/components/RideCard";
 
 const Home = () => {
   // const { user } = useUser();
-  const loading = false;
+  const loading = true;
 
   return (
     <SafeAreaView className="bg-general-500">
@@ -34,9 +34,11 @@ const Home = () => {
                 </Text>
               </>
             ) : (
-              <Text className="text-md font-JakartaMedium text-gray-600">
-                Loading
-              </Text>
+              <ActivityIndicator
+                className="mt-10"
+                size="large"
+                color="#0286FF"
+              />
             )}
           </View>
         )}
