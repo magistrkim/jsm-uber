@@ -11,6 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { icons, images, recentRides } from "@/constants";
 import RideCard from "@/components/RideCard";
 import GoogleTextInput from "@/components/GoogleTextInput";
+import Map from "@/components/Map";
 
 const Home = () => {
   const { user } = useUser();
@@ -77,7 +78,9 @@ const Home = () => {
               <Text className="text-xl font-JakartaBold mb-3 mt-5">
                 Your Current Location
               </Text>
-              <View className="flex flex-row items-center bg-transparent h-[300px]"></View>
+              <View className="flex flex-row items-center bg-transparent h-[300px]">
+                <Map />
+              </View>
             </>
           </>
         )}
