@@ -19,7 +19,7 @@ const RideCard = ({
   ride: Ride,
 }) => {
   return (
-    <View className="flex flex-row justify-center items-center rounded-lg bg-white shadow-md shadow-neutral-400 mb-3">
+    <View className="flex flex-row justify-center items-center rounded-lg bg-white shadow-sm shadow-primary-400 mb-3">
       <View className="flex flex-col justify-center p-3 items-center">
         <View className="flex flex-row justify-between items-center">
           <Image

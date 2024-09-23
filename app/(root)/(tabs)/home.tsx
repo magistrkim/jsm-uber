@@ -19,6 +19,7 @@ const Home = () => {
   const handleSignOut = () => {
     console.warn(user?.emailAddresses[0].emailAddress);
   };
+  const handleDestinationPress = () => {};
   return (
     <SafeAreaView className="bg-general-500">
       <FlatList
@@ -62,12 +63,22 @@ const Home = () => {
               </Text>
               <TouchableOpacity
                 onPress={handleSignOut}
-                className="w-10 h-10 justify-center items-center bg-white rounded-full shadow-sm shadow-neutral-400"
+                className="w-10 h-10 justify-center items-center bg-white rounded-full shadow-sm shadow-primary-400"
               >
                 <Image source={icons.out} className="w-5 h-5" />
               </TouchableOpacity>
             </View>
-            <GoogleTextInput />
+            <GoogleTextInput
+              icon={icons.search}
+              containerStyle="bg-white shadow-sm shadow-primary-400"
+              handlePress={handleDestinationPress}
+            />
+            <>
+              <Text className="text-xl font-JakartaBold mb-3 mt-5">
+                Your Current Location
+              </Text>
+              <View className="flex flex-row items-center bg-transparent h-[300px]"></View>
+            </>
           </>
         )}
       />
