@@ -1,5 +1,6 @@
 import { useUser } from "@clerk/clerk-expo";
 import {
+  Location,
   ActivityIndicator,
   FlatList,
   Image,
@@ -12,15 +13,27 @@ import { icons, images, recentRides } from "@/constants";
 import RideCard from "@/components/RideCard";
 import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
+import { useLocationStore } from "@/store";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
   const loading = true;
+  const [hasPermission, setHasPermission] = useState(false);
 
   const handleSignOut = () => {
     console.warn(user?.emailAddresses[0].emailAddress);
   };
   const handleDestinationPress = () => {};
+
+  useEffect(() => {
+    const requestLocation = async () => {
+      let { status } = await 
+    };
+    requestLocation();
+  }, []);
+
   return (
     <SafeAreaView className="bg-general-500">
       <FlatList
