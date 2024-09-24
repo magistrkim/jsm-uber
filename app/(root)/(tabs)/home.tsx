@@ -82,6 +82,9 @@ const Home = () => {
                 <Map />
               </View>
             </>
+            <Text className="text-xl font-JakartaBold mb-3 mt-5">
+              Recent Rides
+            </Text>
           </>
         )}
       />
