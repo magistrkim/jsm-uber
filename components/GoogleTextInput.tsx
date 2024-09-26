@@ -2,6 +2,9 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { GoogleInputProps } from "@/types/type";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import { icons } from "@/constants";
+
+const googlePlacesApiKey = process.env.EXPO_PUBLIC_GOOGLE_API_KEY;
 
 const GoogleTextInput = ({
   icon,
@@ -14,7 +17,6 @@ const GoogleTextInput = ({
     <View
       className={`flex flex-row justify-center items-center relative z-50 rounded-md ${containerStyle} mb-5 px-4`}
     >
-      <Image source={icon} className="w-6 h-6" />
       <GooglePlacesAutocomplete
         fetchDetails={true}
         placeholder="Where do you want to go?"
@@ -45,6 +47,30 @@ const GoogleTextInput = ({
             shadowColor: "#d4d4d4",
             zIndex: 99,
           },
+        }}
+        onPress={(data, details = null) => {
+          handlePress({
+            latitude: details?.geometry.location.lat!,
+            longitude: details?.geometry.location.lng!,
+            address: data.description,
+          });
+        }}
+        query={{
+          key: googlePlacesApiKey,
+          language: "en",
+        }}
+        renderLeftButton={() => (
+          <View className="justify-center items-center w-6 h-6">
+            <Image
+              source={icon ? icon : icons.search}
+              className="w-6 h-6"
+              resizeMode="contain"
+            />
+          </View>
+        )}
+        textInputProps={{
+          placeholderTextColor: "gray",
+          placeholder: initialLocation ?? "Where do you want to go?",
         }}
       />
     </View>
