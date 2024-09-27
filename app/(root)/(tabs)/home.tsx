@@ -15,6 +15,7 @@ import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
 import { useLocationStore } from "@/store";
 import { useEffect, useState } from "react";
+import { router } from "expo-router";
 
 const Home = () => {
   const { setUserLocation, setDestinationLocation } = useLocationStore();
@@ -25,7 +26,14 @@ const Home = () => {
   const handleSignOut = () => {
     console.warn(user?.emailAddresses[0].emailAddress);
   };
-  const handleDestinationPress = () => {};
+  const handleDestinationPress = (location: {
+    latitude: number,
+    longitude: number,
+    address: string,
+  }) => {
+    setDestinationLocation(location);
+    router.push("/(root)");
+  };
 
   useEffect(() => {
     const requestLocation = async () => {
