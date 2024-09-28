@@ -32,7 +32,7 @@ const Home = () => {
     address: string,
   }) => {
     setDestinationLocation(location);
-    router.push("/(root)");
+    router.push("/(root)/find-ride");
   };
 
   useEffect(() => {
