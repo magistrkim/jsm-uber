@@ -31,8 +31,8 @@ const Home = () => {
     longitude: number,
     address: string,
   }) => {
-    setDestinationLocation(location);
     router.push("/(root)/find-ride");
+    setDestinationLocation(location);
   };
 
   useEffect(() => {
