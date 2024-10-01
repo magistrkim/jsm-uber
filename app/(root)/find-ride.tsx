@@ -2,7 +2,10 @@ import { View, Text } from "react-native";
 import React from "react";
 import { useLocationStore } from "@/store";
 import RideLayout from "@/components/RideLayout";
-import { SafeAreaView } from "react-native-safe-area-context";
+import GoogleTextInput from "@/components/GoogleTextInput";
+import { icons } from "@/constants";
+import Button from "@/components/Button";
+import { router } from "expo-router";
 
 const FindRide = () => {
   const {
@@ -13,7 +16,27 @@ const FindRide = () => {
   } = useLocationStore();
   return (
     <RideLayout title="Ride">
-      <Text className="text-2xl">Find Ride: {userAddress}</Text>
+      <View className="my-2">
+        <Text className="text-lg font-JakartaSemiBold mb-3">From</Text>
+        <GoogleTextInput
+          icon={icons.target}
+          handlePress={(location) => setUserLocation(location)}
+          initialLocation={userAddress!}
+          containerStyle="bg-white shadow-sm shadow-primary-400"
+          textInputBackgroundColor="transparent"
+        />
+      </View>
+      <View className="my-2">
+        <Text className="text-lg font-JakartaSemiBold mb-3">To</Text>
+        <GoogleTextInput
+          icon={icons.map}
+          handlePress={(location) => setDestinationLocation(location)}
+          initialLocation={destinationAddress!}
+          containerStyle="bg-white shadow-sm shadow-primary-400"
+          textInputBackgroundColor="transparent"
+        />
+      </View>
+      <Button title="Find now" onPress={() => router.push("/")} />
     </RideLayout>
   );
 };
