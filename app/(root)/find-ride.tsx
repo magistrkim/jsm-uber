@@ -12,11 +12,9 @@ const FindRide = () => {
     setDestinationLocation,
   } = useLocationStore();
   return (
-    <SafeAreaView>
-      <RideLayout>
-        <Text className="text-2xl">Find Ride: {userAddress}</Text>
-      </RideLayout>
-    </SafeAreaView>
+    <RideLayout title="Find Ride">
+      <Text className="text-2xl">Find Ride: {userAddress}</Text>
+    </RideLayout>
   );
 };
 
