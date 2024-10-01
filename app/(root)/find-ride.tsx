@@ -1,6 +1,8 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { useLocationStore } from "@/store";
+import RideLayout from "@/components/RideLayout";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const FindRide = () => {
   const {
@@ -10,10 +12,11 @@ const FindRide = () => {
     setDestinationLocation,
   } = useLocationStore();
   return (
-    <View>
-      <Text className="text-2xl">You are here: {userAddress}</Text>
-      <Text className="text-2xl">You are going to: {destinationAddress}</Text>
-    </View>
+    <SafeAreaView>
+      <RideLayout>
+        <Text className="text-2xl">Find Ride: {userAddress}</Text>
+      </RideLayout>
+    </SafeAreaView>
   );
 };
 

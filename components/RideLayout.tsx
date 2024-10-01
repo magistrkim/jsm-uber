@@ -1,10 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const RideLayout = () => {
+const RideLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <View>
-      <Text>RideLayout</Text>
+      <Text>Top of the Layout</Text>
+      {children}
+      <Text>Bottom of the Layout</Text>
     </View>
   );
 };
