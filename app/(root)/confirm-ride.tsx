@@ -6,25 +6,15 @@ import GoogleTextInput from "@/components/GoogleTextInput";
 import { drivers, icons } from "@/constants";
 import Button from "@/components/Button";
 import { router } from "expo-router";
+import DriverCard from "@/components/DriverCard";
 
 const ConfirmRide = () => {
-  const { destinationAddress, setDestinationLocation } = useLocationStore();
   return (
     <RideLayout title="Choose a Driver" snapPoints={["65%", "85%"]}>
       <FlatList
         data={drivers}
-        renderItem={({ item }) => <Text>DriverCard</Text>}
+        renderItem={({ item }) => <DriverCard item={item} />}
       />
-      <View>
-        <Text className="text-lg font-JakartaSemiBold mb-3">To</Text>
-        <GoogleTextInput
-          icon={icons.map}
-          handlePress={(location) => setDestinationLocation(location)}
-          initialLocation={destinationAddress!}
-          containerStyle="bg-white shadow-sm shadow-primary-400"
-          textInputBackgroundColor="transparent"
-        />
-      </View>
       <Button
         className="mt-2"
         title="Book Ride"
