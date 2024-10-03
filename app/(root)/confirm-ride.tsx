@@ -14,11 +14,14 @@ const ConfirmRide = () => {
       <FlatList
         data={drivers}
         renderItem={({ item }) => <DriverCard item={item} />}
-      />
-      <Button
-        className="mt-2"
-        title="Book Ride"
-        onPress={() => router.push("/(root)/book-ride")}
+        ListFooterComponent={() => (
+          <View className="mx-5 mt-8">
+            <Button
+              title="Select Ride"
+              onPress={() => router.push("/(root)/book-ride")}
+            />
+          </View>
+        )}
       />
     </RideLayout>
   );
