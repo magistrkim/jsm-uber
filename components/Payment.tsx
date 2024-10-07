@@ -4,7 +4,7 @@ import Button from "./Button";
 const Payment = () => {
   return (
     <>
-      <Button title="Pay the Ride" />
+      <Button title="Confirm Ride" className="my-6" onPress={() => {}} />
     </>
   );
 };

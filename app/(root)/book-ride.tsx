@@ -23,13 +23,13 @@ const BookRide = () => {
           Ride Information
         </Text>
 
-        <View className="flex flex-col w-full items-center justify-center mt-10">
+        <View className="flex flex-col w-full items-center justify-center mt-4">
           <Image
             source={{ uri: driverDetails?.profile_image_url }}
             className="w-28 h-28 rounded-full"
           />
 
-          <View className="flex flex-row items-center justify-center mt-5 space-x-2">
+          <View className="flex flex-row items-center justify-center mt-4">
             <Text className="text-lg font-JakartaSemiBold">
               {driverDetails?.title}
             </Text>
