@@ -47,7 +47,7 @@ const BookRide = () => {
           </View>
         </View>
 
-        <View className="flex flex-col w-full items-start justify-center py-3 px-5 rounded-3xl bg-general-600 mt-5">
+        <View className="flex flex-col w-full items-start justify-center py-2 px-5 rounded-3xl bg-general-600 mt-5">
           <View className="flex flex-row items-center justify-between w-full border-b border-white py-3">
             <Text className="text-lg font-JakartaRegular">Ride Price</Text>
             <Text className="text-lg font-JakartaRegular text-[#0CC25F]">
