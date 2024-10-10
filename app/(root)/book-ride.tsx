@@ -21,8 +21,8 @@ const BookRide = () => {
   return (
     <StripeProvider
       publishableKey={process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY!}
-      merchantIdentifier="merchant.identifier" // required for Apple Pay
-      urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
+      merchantIdentifier="merchant.com.uber"
+      urlScheme="myapp"
     >
       <RideLayout title="Book Ride">
         <>
@@ -92,7 +92,13 @@ const BookRide = () => {
               </Text>
             </View>
           </View>
-          <Payment />
+          <Payment
+            // fullName={user?.fullName!}
+            // email={user?.emailAddresses[0].emailAddress!}
+            // amount={driverDetails?.price!}
+            // driverId={driverDetails?.id}
+            // rideTime={driverDetails?.time!}
+          />
         </>
       </RideLayout>
     </StripeProvider>
