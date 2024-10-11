@@ -1,4 +1,4 @@
-<h3 align="center">"Guys, I’m waiting confirmation from T****tini, and it seems this could mark the end of my journey in IT."</h3>
+<h3 align="center">"Guys, I’m waiting confirmation from T****tini, and it seems this could mark the end of my journey in Development."</h3>
 
 <div align="center">
   <br />
