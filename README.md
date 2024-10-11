@@ -1,3 +1,5 @@
+<h3 align="center">"Guys, I’m awaiting confirmation from Trentini, and it seems this could mark the end of my journey in IT."</h3>
+
 <div align="center">
   <br />
     <a href="https://youtu.be/kmy_YNhl0mw" target="_blank">
