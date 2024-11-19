@@ -1,5 +1,3 @@
-<h3 align="center">"Guys, I’m waiting confirmation from T****tini, and it seems this could mark the end of my journey in Development."</h3>
-
 <div align="center">
   <br />
     <a href="https://youtu.be/kmy_YNhl0mw" target="_blank">
